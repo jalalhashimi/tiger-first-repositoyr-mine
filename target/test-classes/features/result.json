@@ -1,0 +1,18 @@
+{
+	"id": "#ignore",
+	"primaryPerson": {
+		"id": 8170,
+		"email": "tiger29@gmail.com",
+		"title": "Mr.",
+		"firstName": "Aaron",
+		"lastName": "Robert",
+		"gender": "MALE",
+		"maritalStatus": "MARRIED",
+		"employmentStatus": "Student",
+		"dateOfBirth": "02/02/2000"
+	},
+	"make": "lamborghini",
+	"model": "Avandor",
+	"year": "2022",
+	"licensePlate":"2022"
+}

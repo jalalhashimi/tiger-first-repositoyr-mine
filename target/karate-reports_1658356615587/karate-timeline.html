@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/resources\/features\/assignment[1:13]","start":1658356535265,"end":1658356538823,"title":"src\/test\/resources\/features\/assignment[1:13] 18:35:35.265-18:35:38.823 Add new Account with Existing email address","className":"failed"},{"id":2,"group":1,"content":"src\/test\/resources\/features\/assignment[2:25]","start":1658356538834,"end":1658356539999,"title":"src\/test\/resources\/features\/assignment[2:25] 18:35:38.834-18:35:39.999 Add car to an existing Account.","className":"failed"},{"id":3,"group":1,"content":"src\/test\/resources\/features\/assignment[3:41]","start":1658356540008,"end":1658356540907,"title":"src\/test\/resources\/features\/assignment[3:41] 18:35:40.008-18:35:40.907 add Phone number to existing account.","className":"failed"},{"id":4,"group":1,"content":"src\/test\/resources\/features\/assignment[4:55]","start":1658356540927,"end":1658356541766,"title":"src\/test\/resources\/features\/assignment[4:55] 18:35:40.927-18:35:41.766 add address to existing account.","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
